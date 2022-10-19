@@ -1,2 +1,7 @@
 # ProgressChecker
-A webpage to create a To-do list for a particular date and on checking any task on that date collecting the data of the number of checked tasks and then storing them on local storage and plotting a monthly progress graph based on it.
+
+To use the project
+
+1. Download it
+2. Open the html file in any browser
+3. As all the data is stored in local storage of browser make sure to use it with the same browser and same account
