@@ -1,0 +1,4 @@
+1.from each function there will be atmax 1 req either get or post.
+2.anything that is changing the data base has to be done inside server.
+3. if a ajax function is returning then try not to return 
+4. else https://stackoverflow.com/questions/14220321/how-do-i-return-the-response-from-an-asynchronous-call

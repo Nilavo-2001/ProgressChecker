@@ -1,0 +1,128 @@
+#header {
+  position: relative;
+  height: 65vh;
+}
+#header::before {
+  content: "";
+  background-image: url(./images/header.jpeg);
+  background-repeat: no-repeat;
+  background-position: 65% 40%;
+  background-size: cover;
+  background-attachment: fixed;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.7;
+}
+h1 {
+  margin-bottom: 1.2rem;
+}
+#itemList h1 {
+  margin-bottom: 0.4rem;
+}
+.center {
+  text-align: center;
+  padding: 10px;
+}
+.center:nth-child(odd) {
+  background-color: #eeeeee;
+}
+.form-select {
+  width: 30%;
+  margin: auto;
+}
+.form-select:focus {
+  border-color: darkgrey;
+  box-shadow: 0 0 0 0.2rem grey;
+}
+#Footer h1 {
+  margin-bottom: 0.2rem;
+}
+#taskInput {
+  width: 40%;
+  margin: auto;
+  margin-top: 1rem;
+}
+#itemList ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid #e5e5e5; */
+}
+#itemList ul li {
+  padding: 10px;
+  /* padding-left: 0; */
+  display: flex;
+  justify-content: space-between;
+  align-items: inherit;
+  align-items: center;
+}
+#itemList ul li:hover {
+  background: #f3f3f3;
+}
+#itemList #list input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+#itemList #list label {
+  position: relative;
+  cursor: pointer;
+}
+
+#itemList #list label:before {
+  content: "";
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 2px solid #0079bf;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+    inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 10px;
+}
+#itemList #list input:checked + label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 9px;
+  width: 6px;
+  height: 14px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+#itemList #list input:checked + label:before {
+  background: #0079bf;
+}
+#itemList #list input:checked + label {
+  text-decoration: line-through;
+}
+.showTaskContent {
+  padding: 10px;
+  width: 90%;
+  margin: auto;
+  border: solid 2px black;
+  border-radius: 10px;
+}
+.progress {
+  width: 80%;
+  margin: auto;
+  background-color: white;
+  margin-top: 3%;
+  margin-bottom: 5%;
+  font-size: larger;
+}
+#myChart {
+  margin: auto;
+}
