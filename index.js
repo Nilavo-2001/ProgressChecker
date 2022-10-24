@@ -88,7 +88,7 @@ function addTask(title, month, day) {
   let task = new createTask(title, false);
   // if the month does'nt exsist the creating month and then day and the task array for that day
   let monthArr = [];
-  
+
   if (localStorage.getItem(month + "") != null) {
     monthArr = JSON.parse(localStorage.getItem(month + ""));
   }
@@ -104,6 +104,21 @@ function addTask(title, month, day) {
 add.addEventListener("click", () => {
   //function called on clicking the add task button
   // console.log("Button Clicked");
+  if (title.value != "") {
+    let reqList = addTask(title.value, picker.getMonth(), picker.getDate());
+    showList(reqList);
+    showProgress(calDayProgress());
+    showGraph();
+    title.value = "";
+  } else {
+    console.log("Nothing Entered");
+  }
+});
+title.addEventListener("keydown", (event) => {
+  if (event.key != "Enter") {
+    //console.log("Not enter");
+    return;
+  }
   if (title.value != "") {
     let reqList = addTask(title.value, picker.getMonth(), picker.getDate());
     showList(reqList);
